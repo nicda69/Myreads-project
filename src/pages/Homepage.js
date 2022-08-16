@@ -1,8 +1,17 @@
 import React, {Component} from "react";
-import Shelf from '../components/Shelf'
-import Search from '../components/Search'
+import Shelf from '../components/Shelf';
+import Search from '../components/Search';
+import {getAll} from "../BooksAPI";
 
 export default class Homepage extends Component {
+    async componentDidMount() {
+        try {
+            const books = await getAll();
+            console.log(books)
+        } catch(err) {
+            console.log(err)
+        }
+    }
     render() {
         return (
             <div className="list-books">
