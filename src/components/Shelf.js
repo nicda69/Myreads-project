@@ -20,3 +20,11 @@ function Shelf ({title, books, setView, inputShelf}) {
     </div>
   )
 }
+Shelf.prototype = {
+  title: PropTypes.string.isRequired,
+  book: PropTypes.array.isRequired,
+  inputShelf: PropTypes.func.isRequired,
+  setView: PropTypes.func.isRequired
+}
+
+export default Shelf
