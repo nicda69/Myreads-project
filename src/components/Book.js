@@ -1,5 +1,7 @@
+import React from "react";
 import {update} from "../BooksAPI";
 import {Link} from "react-router-dom";
+import PropTypes from "prop-types";
 
 
 function Book({book, setView, inputShelf}) {

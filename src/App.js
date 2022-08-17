@@ -1,9 +1,10 @@
 import {useEffect, useState} from 'react';
 import ".App.css"
 import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
-import Shelves from "../pages/Shelves"
-import Searchpage from './pages/Searchpage';
+import Shelves from "./Shelves"
 import {getAll} from "./BooksAPI";
+import Bookinfo from "./components/Bookinfo"
+import Search from "./components/Search"
 
 function BooksApp() {
   const [books, setBooks] = useState([])
@@ -36,7 +37,7 @@ function BooksApp() {
         <Routes>
           <Route exact path="/" element={<Shelves books={books} updateShelf={updateShelf} setView={setBookView}/>} />
           <Route exact path="/search" element={<Search books={books} updateShelf={updateShelf} setView={setBookView}/>} />
-          <Route exact path="/detail" element={<Detail book={bookView}/>} />
+          <Route exact path="/bookinfo" element={<Bookinfo book={bookView}/>} />
         </Routes>
       </div>
     </Router>
