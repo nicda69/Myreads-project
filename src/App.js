@@ -1,7 +1,7 @@
 import {useEffect, useState} from 'react';
 import ".App.css"
 import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
-import Homepage from './pages/Homepage';
+import Shelves from "../pages/Shelves"
 import Searchpage from './pages/Searchpage';
 import {getAll} from "./BooksAPI";
 
