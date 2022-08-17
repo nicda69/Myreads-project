@@ -1,4 +1,3 @@
-import React from "react";
 import {update} from "../BooksAPI";
 import {Link} from "react-router-dom";
 

@@ -34,8 +34,9 @@ function BooksApp() {
     <Router>
       <div className="app">
         <Routes>
-          <Route exact path="/" element={<Homepage/>}/>
-          <Route exact path="/search" element={<Searchpage/>}/>
+          <Route exact path="/" element={<Shelves books={books} updateShelf={updateShelf} setView={setBookView}/>} />
+          <Route exact path="/search" element={<Search books={books} updateShelf={updateShelf} setView={setBookView}/>} />
+          <Route exact path="/detail" element={<Detail book={bookView}/>} />
         </Routes>
       </div>
     </Router>

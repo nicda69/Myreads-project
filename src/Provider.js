@@ -1,6 +1,6 @@
-import React, {Component} from "react";
+import { createContext, Component } from "react";
 
-export const MyContext = React.createContext();
+export const MyContext = createContext();
 
 export default class provider extends Component {
     constructor() {

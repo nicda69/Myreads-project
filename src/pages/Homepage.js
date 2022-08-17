@@ -1,4 +1,4 @@
-import React, {Component} from "react";
+import { Component } from "react";
 import Shelf from '../components/Shelf';
 import Search from '../components/Search';
 import {getAll} from "../BooksAPI";
