@@ -44,4 +44,9 @@ function Book({book, setView, inputShelf}) {
     </div>
   )
 }
+Book.prototype = {
+  book: PropTypes.object.isRequired,
+  inputShelf: PropTypes.func.isRequired,
+  setView: PropTypes.func.isRequired
+}
 export default Book

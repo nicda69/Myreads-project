@@ -4,7 +4,8 @@ import PropTyes from "prop-types";
 import Shelf from "./components/Shelf"
 
 function Shelves({books, setView, inputShelf}) {
-    const shelvesDetail = [{id: "shelf1", title:"Current Reading", filter: "currentlyReading"},
+    const shelvesDetail = [
+                        {id: "shelf1", title:"Current Reading", filter: "currentlyReading"},
                         {id: "shelf2", title:"Want to Read", filter: "wantToRead"},
                         {id: "shelf3", title:"Read", filter:"read"}
                     ]
