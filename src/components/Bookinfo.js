@@ -2,7 +2,7 @@ import React from "react";
 import "../App.css";
 import {Link} from "react-router-dom";
 
-function Detail({book}) {
+function Bookinfo({book}) {
     return (
         <div className="list-books">
             <Link to='/'className="close-search">
@@ -46,4 +46,4 @@ function Detail({book}) {
   )
 }
 
-export default Detail
+export default Bookinfo

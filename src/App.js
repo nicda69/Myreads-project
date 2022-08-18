@@ -1,10 +1,11 @@
 import "./App.css";
 import { useEffect, useState } from "react";
 import Search from "./components/Search";
-import Shelves from "./Shelves";
-import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
+import Shelves from "./components/Shelves";
+import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
 import {getAll} from "./BooksAPI"
-import Detail from "./components/Bookinfo";
+import Bookinfo from "./components/Bookinfo";
+import NotFound from "./components/NotFound";
 
 function App() {
   const [books, setBooks] = useState([])
@@ -36,9 +37,10 @@ function App() {
     <Router>
       <div className="app">
         <Routes>
+          <Route path="*" element={<NotFound/>}/>
           <Route exact path="/" element={<Shelves books={books} inputShelf={inputShelf} setView={setBookView}/>} />
           <Route exact path="/search" element={<Search books={books} inputShelf={inputShelf} setView={setBookView}/>} />
-          <Route exact path="/bookinfo" element={<Detail book={bookView}/>} />
+          <Route exact path="/bookinfo" element={<Bookinfo book={bookView}/>} />
         </Routes>
       </div>
     </Router>
