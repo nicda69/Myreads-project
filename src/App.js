@@ -40,7 +40,7 @@ function App() {
           <Route path="*" element={<NotFound/>}/>
           <Route exact path="/" element={<Shelves books={books} inputShelf={inputShelf} setView={setBookView}/>} />
           <Route exact path="/search" element={<Search books={books} inputShelf={inputShelf} setView={setBookView}/>} />
-          <Route exact path="/bookinfo" element={<Bookinfo book={bookView}/>} />
+          <Route exact path="/detail" element={<Bookinfo book={bookView}/>} />
         </Routes>
       </div>
     </Router>
