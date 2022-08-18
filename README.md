@@ -1,19 +1,24 @@
 # MyReads Project
 
-This is the starter template for the final assessment project for Udacity's React Fundamentals course. The goal of this template is to save you time by providing a static example of the CSS and HTML markup that may be used, but without any of the React code that is needed to complete the project. If you choose to start with this template, your job will be to add interactivity to the app by refactoring the static code in this template.
+Final project for Udacity´s React Fundamentals course.
 
-Of course, you are free to start this project from scratch if you wish! Just be sure to use [Create React App](https://github.com/facebookincubator/create-react-app) to bootstrap the project.
+The MyReads app ist an app for sorting books. You can categorize books into the shelves "currently reading", "want to read" and "read".
+On the search page you can search for more books and add them to the shelves.
 
-## TL;DR
+## Install
 
-To get started developing right away:
+* you can install this project to your PC using clone the repo to your github account then download It as a ZIP file to your PC.
+or clone it using GIT git clone.
 
 * install all project dependencies with `npm install`
+
+## Run
+
 * start the development server with `npm start`
 
 ## What You're Getting
+
 ```bash
-├── CONTRIBUTING.md
 ├── README.md - This file.
 ├── SEARCH_TERMS.md # The whitelisted short collection of available search terms for you to use with your app.
 ├── package.json # npm package manager file. It's unlikely that you'll need to modify this.
@@ -31,52 +36,15 @@ To get started developing right away:
     │   └── arrow-drop-down.svg
     ├── index.css # Global styles. You probably won't need to change anything here.
     └── index.js # You should not need to modify this file. It is used for DOM rendering only.
+    └── components  
+        ├── Book.js
+        ├── Bookinfo.js
+        ├── NotFound.js
+        ├── Search.js
+        ├── Shelf.js
+        └── Shelves.js
+
 ```
-
-Remember that good React design practice is to create new JS files for each component and use import/require statements to include them where they are needed.
-
-## Backend Server
-
-To simplify your development process, we've provided a backend server for you to develop against. The provided file [`BooksAPI.js`](src/BooksAPI.js) contains the methods you will need to perform necessary operations on the backend:
-
-* [`getAll`](#getall)
-* [`update`](#update)
-* [`search`](#search)
-
-### `getAll`
-
-Method Signature:
-
-```js
-getAll()
-```
-
-* Returns a Promise which resolves to a JSON object containing a collection of book objects.
-* This collection represents the books currently in the bookshelves in your app.
-
-### `update`
-
-Method Signature:
-
-```js
-update(book, shelf)
-```
-
-* book: `<Object>` containing at minimum an `id` attribute
-* shelf: `<String>` contains one of ["wantToRead", "currentlyReading", "read"]  
-* Returns a Promise which resolves to a JSON object containing the response data of the POST request
-
-### `search`
-
-Method Signature:
-
-```js
-search(query)
-```
-
-* query: `<String>`
-* Returns a Promise which resolves to a JSON object containing a collection of a maximum of 20 book objects.
-* These books do not know which shelf they are on. They are raw results only. You'll need to make sure that books have the correct state while on the search page.
 
 ## Important
 The backend API uses a fixed set of cached search results and is limited to a particular set of search terms, which can be found in [SEARCH_TERMS.md](SEARCH_TERMS.md). That list of terms are the _only_ terms that will work with the backend, so don't be surprised if your searches for Basket Weaving or Bubble Wrap don't come back with any results.
@@ -88,10 +56,3 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ## Contributing
 
 This repository is the starter code for _all_ Udacity students. Therefore, we most likely will not accept pull requests.
-
-For details, check out [CONTRIBUTING.md](CONTRIBUTING.md).
-
- # Archival Note 
- This repository is deprecated; therefore, we are going to archive it. However, learners will be able to fork it to their personal Github account but cannot submit PRs to this repository. If you have any issues or suggestions to make, feel free to: 
-- Utilize the https://knowledge.udacity.com/ forum to seek help on content-specific issues. 
-- Submit a support ticket along with the link to your forked repository if (learners are) blocked for other reasons. Here are the links for the [retail consumers](https://udacity.zendesk.com/hc/en-us/requests/new) and [enterprise learners](https://udacityenterprise.zendesk.com/hc/en-us/requests/new?ticket_form_id=360000279131).
