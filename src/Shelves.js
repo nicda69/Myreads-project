@@ -19,7 +19,7 @@ function Shelves({books, setView, inputShelf}) {
                     <div>
                         {shelvesDetail.map(s => (
                             <div key = {s.id}>
-                                <Shelf title = {s.title} books = {books.filter(book.shelf === s.filter)} inputShelf={inputShelf} setView={setView}/>
+                                <Shelf title={s.title} books={books.filter(book => book.shelf === s.filter)} inputShelf={inputShelf} setView={setView}/>
                             </div>
                         ))}
                     </div>

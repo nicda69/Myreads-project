@@ -53,7 +53,7 @@ body, .app {
   bottom: 25px;
 }
 
-.open-search button {
+.open-search a {
   display: block;
   width: 50px;
   height: 50px;
@@ -65,7 +65,6 @@ body, .app {
   background-size: 28px;
   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
   font-size: 0;
-  outline: 0;
 }
 
 .open-search button:hover {
@@ -110,12 +109,6 @@ body, .app {
   background-size: 28px;
   font-size: 0;
   border: none;
-  outline: none;
-}
-
-button:active {
-  border: red;
-  outline: none;
 }
 
 .search-books-results {
@@ -195,4 +188,24 @@ button:active {
   padding: 20px 10px 0;
   text-align: center;
   font-size: 0.8em;
+}
+
+.detail-body {
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+}
+
+.book-detail {
+  flex: 6;
+}
+
+.book-detail-title{
+  font-size: 2em;
+  font-weight: 700;
+}
+
+.book-detail-sub{
+  font-size: 0.7em;
+  margin-bottom: 5px;
 }

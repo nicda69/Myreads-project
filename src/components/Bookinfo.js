@@ -1,15 +1,15 @@
 import React from "react";
-import "./App.css";
+import "../App.css";
 import {Link} from "react-router-dom";
 
-function Bookinfo({book}) {
+function Detail({book}) {
     return (
         <div className="list-books">
             <Link to='/'className="close-search">
             Close
             </Link>
             <div className='detail-body'>
-                <div className="book-cover"style={{width: 128, height: 192, marginRight: 10, backgroundImage:`url(${book.imageLinks.thumbnail})`}}>
+                <div className="book-cover"style={{width: 128, height: 192, marginRight: 10, backgroundImage:`url(${book.imageLinks.thumbnail})`,}}>
                 </div>
                 <div className='book-detail'>
                     <div className="book-detail-title">
@@ -46,4 +46,4 @@ function Bookinfo({book}) {
   )
 }
 
-export default Bookinfo
+export default Detail

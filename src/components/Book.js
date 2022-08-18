@@ -15,8 +15,7 @@ function Book({book, setView, inputShelf}) {
   }
   return (
     <div>
-      {(book.author && book.imageLinks) && 
-        <div className="book">
+      {(book.authors && book.imageLinks) && <div className="book">
           <div className="book-top">
             <div className="book-cover" style={{ width: 128, height: 193, backgroundImage: `url(${book.imageLinks.smallThumbnail})`}}>
             </div>
@@ -35,9 +34,9 @@ function Book({book, setView, inputShelf}) {
                 {book.title}
               </div>
             </Link>
-            {book.author.map(author => (
+            {book.authors.map(author => (
               <div key = {book.id + author}>
-                <div className="book-authors">Harper Lee</div>
+                <div className="book-authors">{author}</div>
               </div>
             ))}
         </div>}

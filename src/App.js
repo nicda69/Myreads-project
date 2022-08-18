@@ -3,8 +3,8 @@ import { useEffect, useState } from "react";
 import Search from "./components/Search";
 import Shelves from "./Shelves";
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
-import {getAll} from './BooksAPI'
-import Bookinfo from "./components/Bookinfo";
+import {getAll} from "./BooksAPI"
+import Detail from "./components/Bookinfo";
 
 function App() {
   const [books, setBooks] = useState([])
@@ -14,7 +14,7 @@ function App() {
       getAll().then(data => {
         if(data) setBooks(data) 
       }).catch(e => console.log(e))
-  }
+    }
 
   function inputShelf(shelf, book){
     const b = books.filter(b => b.id === book.id)
@@ -32,13 +32,13 @@ function App() {
     setData();
   }, [])
 
-  return (
+  return(
     <Router>
       <div className="app">
         <Routes>
           <Route exact path="/" element={<Shelves books={books} inputShelf={inputShelf} setView={setBookView}/>} />
           <Route exact path="/search" element={<Search books={books} inputShelf={inputShelf} setView={setBookView}/>} />
-          <Route exact path="/bookinfo" element={<Bookinfo book={bookView}/>} />
+          <Route exact path="/bookinfo" element={<Detail book={bookView}/>} />
         </Routes>
       </div>
     </Router>
